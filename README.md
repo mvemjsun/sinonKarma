@@ -11,7 +11,7 @@ Starter project for you to experiment 🎯
 ## To run the tests
 
 - Clone repo
-- Run `npm i` to install node 
+- Run `npm i` to install node modules
 - `npm run test`, this will load Karma test runner and run the tests. It will then wait in watch for changes and run tests
  automatically if things change.
 
