@@ -18,16 +18,16 @@ module.exports = function(config) {
 
       reporters: ['mocha'],
 
-      files: ['test/**/*.js'],
+      files: ['test/*.test.js'],
 
       browsers: ['PhantomJS'],
 
       browserify: {
-        debug: true,
+        debug: false,
         transform: [
           ['babelify', {
             presets: ['@babel/preset-env'],
-            plugins: []
+            plugins: ["@babel/plugin-proposal-class-properties"]
           }]
         ],
         extensions: ['.js'],

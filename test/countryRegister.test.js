@@ -1,6 +1,5 @@
 import { expect } from 'chai';
 import {CountryRegister} from '../js/CountryRegister'
-
 describe('CountryRegister', () => {
 
     afterEach(() => {
