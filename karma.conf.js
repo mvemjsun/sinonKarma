@@ -18,6 +18,8 @@ module.exports = function(config) {
 
       reporters: ['mocha'],
 
+      singleRun: true,
+
       files: ['test/*.test.js'],
 
       browsers: ['PhantomJS'],
