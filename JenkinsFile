@@ -21,16 +21,8 @@ pipeline {
                         echo 'Parallel: Testing'
                         sh 'npm run test'
                     }
-
-                    post {
-                        always {}
-                    }
                 }
             }
         }
-    }
-
-    post {
-            always {}
     }
 }
