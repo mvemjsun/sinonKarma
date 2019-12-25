@@ -19,12 +19,11 @@ pipeline {
                 stage('Test') {
                     steps {
                         echo 'Parallel: Testing'
-                        sh npm run test
+                        sh 'npm run test'
                     }
 
                     post {
-                        always {
-                        }
+                        always {}
                     }
                 }
             }
@@ -32,7 +31,6 @@ pipeline {
     }
 
     post {
-            always {
-            }
+            always {}
     }
 }
