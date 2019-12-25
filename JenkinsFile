@@ -2,12 +2,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Dependencies') {
             steps {
                 echo "Building in workspace ${WORKSPACE}"
+                sh 'npm ci'
             }
         }
 
+        
         stage("Test") {
             parallel {
                 stage('Lint') {
