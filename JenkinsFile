@@ -1,4 +1,6 @@
 
+def y
+
 pipeline {
     agent any
     stages {
@@ -20,6 +22,7 @@ pipeline {
                                 myProc.showBranchName()
                                 myProc.showParams("Hola")
                                 def x = myProc.returnValue()
+                                y = x
                                 echo "Return value is ${x}"
                             }
                         }
@@ -29,6 +32,8 @@ pipeline {
                         steps {
                             echo 'Parallel: Testing'
                             sh 'npm run test'
+                            echo "Value of y is ${y}"
+                            echo "Value of x is ${x}"
                         }
                     }
             }
