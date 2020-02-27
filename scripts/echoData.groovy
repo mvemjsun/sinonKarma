@@ -5,3 +5,4 @@ def showBranchName() {
 def showParams(String params) {
   echo "Passed parameter ${params}""
 }
+return this;
