@@ -9,4 +9,4 @@ def showParams(String params) {
 def returnValue() {
   return "Hello world"
 }
-// return this;
+return this;
