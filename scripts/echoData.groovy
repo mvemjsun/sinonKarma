@@ -28,7 +28,7 @@ def ids =
 ]
 
 def importTest() {
-  evaluate(new File("./constants.groovy"))
+  evaluate(new File("./Constants.groovy"))
   def con = new Constants()
   println("constant is ${con} ${con.size()}")
 }
