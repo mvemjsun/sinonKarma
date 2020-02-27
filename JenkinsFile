@@ -1,4 +1,6 @@
 
+def myProc = load './scripts/echoData.groovy'
+
 pipeline {
     agent any
     stages {
@@ -15,6 +17,7 @@ pipeline {
                         steps {
                             milestone label: 'Reached Test Milestone', ordinal: 1
                             echo 'Parallel: Linting'
+                            myProc showBranchName
                         }
                     }
 
