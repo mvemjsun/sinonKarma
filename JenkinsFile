@@ -23,7 +23,9 @@ pipeline {
                                 myProc.showParams("Hola")
                                 def x = myProc.returnValue()
                                 y = x
-                                echo "Return value is ${x}"
+                                def ids = myProc.ids
+                                echo "Ids are ${ids}"
+                                echo "Return value is ${ids} size is ${ids.size()} first ${ids[0]} "
                             }
                         }
                     }
