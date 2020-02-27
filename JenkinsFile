@@ -25,7 +25,7 @@ pipeline {
                                 y = x
                                 def ids = myProc.appIds
                                 echo "Ids are ${ids}"
-                                echo "Return value is ${ids} size is ${ids['id2']} "
+                                echo "Return value is ${ids} size is ${ids['nowTvE2E']} "
                             }
                         }
                     }
