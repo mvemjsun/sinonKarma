@@ -17,20 +17,16 @@ def ids =
 [
   '17711467',
   '7D089856',
-  'F4B8FFA8',
-  '2A190EB0',
-  '40F0D3A5',
-  'EF680D52',
-  'FFEAFA56',
-  '9A9F3E2A',
-  '3E421C22',
-  '27A35817'
 ]
 
-def importTest() {
-  GroovyShell shell = new GroovyShell()
-  def con = shell.parse(new File('Constants.groovy'))
-  println("constant is ${con.fruits} ${con.fruits.size()}")
-}
+@Field
+def id2 = 
+[
+  '17711467'
+]
+
+@Field
+def appIds = [nowTvProdDev: ids, nowTvE2E: id2]
+
 
 return this;

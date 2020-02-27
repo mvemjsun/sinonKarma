@@ -23,10 +23,9 @@ pipeline {
                                 myProc.showParams("Hola")
                                 def x = myProc.returnValue()
                                 y = x
-                                myProc.importTest()
-                                def ids = myProc.ids
+                                def ids = myProc.appIds
                                 echo "Ids are ${ids}"
-                                echo "Return value is ${ids} size is ${ids.size()} first ${ids[0]} "
+                                echo "Return value is ${ids} size is ${ids['id2']} "
                             }
                         }
                     }
