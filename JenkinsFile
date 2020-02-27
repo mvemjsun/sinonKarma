@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                echo "Building in workspace ${WORKSPACE} ${BRANCH_NAME}"
+                echo "Building in workspace ${WORKSPACE} ${GIT_BRANCH}"
                 sh 'npm ci'
             }
         }
