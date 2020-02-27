@@ -9,22 +9,21 @@ pipeline {
             }
         }
 
-        
         stage("Lint+Test") {
-            parallel {
-                stage('Lint') {
-                    steps {
-                        echo 'Parallel: Linting'
+            stages {
+                    stage('Lint') {
+                        steps {
+                            milestone label: 'Reached Test Milestone', ordinal: 1
+                            echo 'Parallel: Linting'
+                        }
                     }
-                }
 
-                stage('Test') {
-                    steps {
-                        milestone label: 'Reached Test Milestone', ordinal: 1
-                        echo 'Parallel: Testing'
-                        sh 'npm run test'
+                    stage('Test') {
+                        steps {
+                            echo 'Parallel: Testing'
+                            sh 'npm run test'
+                        }
                     }
-                }
             }
         }
     }
