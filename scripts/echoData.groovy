@@ -1,3 +1,5 @@
+import groovy.transform.Field
+
 def showBranchName() {
   echo "Branch name in loaded script is ${GIT_BRANCH}"
 }
@@ -10,6 +12,7 @@ def returnValue() {
   return "Hello world"
 }
 
+@Field
 def ids = 
 [
   '17711467',
