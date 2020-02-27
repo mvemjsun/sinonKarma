@@ -33,7 +33,7 @@ pipeline {
                             echo 'Parallel: Testing'
                             sh 'npm run test'
                             echo "Value of y is ${y}"
-                            echo "Value of x is ${x}"
+                            // echo "Value of x is ${x}" // Not accessible
                         }
                     }
             }
