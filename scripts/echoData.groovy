@@ -26,4 +26,11 @@ def ids =
   '3E421C22',
   '27A35817'
 ]
+
+def importTest() {
+  evaluate(new File("./constants.groovy"))
+  def con = new Constants()
+  println("constant is ${con} ${con.size()}")
+}
+
 return this;
